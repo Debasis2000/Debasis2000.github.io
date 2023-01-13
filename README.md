@@ -47,3 +47,26 @@
   // Update the copyright year
   copyright.innerHTML = "Copyright &copy;" + currentYear + " My Website";
 </script>
+<script>
+  var body = document.querySelector("body");
+  var colors = ["#ff0000", "#00ff00", "#0000ff"];
+  var current = 0;
+
+  function changeColor() {
+    body.style.backgroundColor = colors[current];
+    current = (current + 1) % colors.length;
+  }
+
+  setInterval(changeColor, 2000);
+</script>
+<div id="my-element">Hover over me!</div>
+
+<script>
+  var element = document.querySelector("#my-element");
+  element.addEventListener("mouseenter", function() {
+    element.style.transform = "scale(1.2)";
+  });
+  element.addEventListener("mouseleave", function() {
+    element.style.transform = "scale(1)";
+  });
+</script>
