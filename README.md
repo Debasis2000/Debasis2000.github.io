@@ -37,3 +37,13 @@
 
   setInterval(next, 5000);
 </script>
+<script>
+  // Get the current year
+  var currentYear = new Date().getFullYear();
+
+  // Get the copyright element
+  var copyright = document.querySelector("footer p");
+
+  // Update the copyright year
+  copyright.innerHTML = "Copyright &copy;" + currentYear + " My Website";
+</script>
